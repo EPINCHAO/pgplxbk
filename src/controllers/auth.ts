@@ -6,10 +6,11 @@ const registerCtrl = async ({ body }: Request, res: Response) => {
   res.send(responseUser);
 };
 
+
 const loginCtrl = async ({ body }: Request, res: Response) => {
+
   const { email, password } = body;
   const responseUser = await loginUser({ email, password });
-
   if (responseUser === "PASSWORD_INCORRECT") {
     res.status(403);
     res.send(responseUser);
@@ -18,4 +19,4 @@ const loginCtrl = async ({ body }: Request, res: Response) => {
   }
 };
 
-export { loginCtrl, registerCtrl };
+export { loginCtrl, registerCtrl};
