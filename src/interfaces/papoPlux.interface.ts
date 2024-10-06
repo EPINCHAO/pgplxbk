@@ -11,7 +11,7 @@ export interface createTransactionWhasapResource {
 }
 
 
-export interface Welcome {
+export interface PagoPlux {
     code:        number;
     description: string;
     detail:      Detail;
