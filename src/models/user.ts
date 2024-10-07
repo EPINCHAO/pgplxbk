@@ -20,6 +20,10 @@ const UserSchema = new Schema<User>(
       type: String,
       default: "Soy la descripcion",
     },
+    isActive: {
+      type: Boolean,
+      default: true,
+    }
   },
   {
     versionKey: false,
