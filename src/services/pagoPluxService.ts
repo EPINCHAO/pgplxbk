@@ -9,8 +9,7 @@ const password = process.env.CLIENTE_PASSWORD|| "cliente_password";
 
 export const getTransactionById = async (idTransaction: string): Promise<any> => {
     try {
-        console.log(username, password, apiUrl)
-        console.log(idTransaction)
+       
         const response = await axios.get(`${apiUrl}integrations/getTransactionByIdStateResource?idTransaction=${idTransaction}`, {
             auth: {
                 username: username,
@@ -18,7 +17,6 @@ export const getTransactionById = async (idTransaction: string): Promise<any> =>
             }
         });
       
-        console.log(response.data,'response')
         return response.data;
     } catch (error) {
         console.error('Error fetching transaction:', error);
